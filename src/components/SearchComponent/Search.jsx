@@ -20,7 +20,8 @@ const Search = () => {
     results = users;
   }else{
     results = users.filter((dato)=>
-    dato.name.toLowerCase().includes(search.toLocaleLowerCase())
+      dato.name.toLowerCase().includes(search.toLocaleLowerCase()) ||
+      dato.username.toLowerCase().includes(search.toLocaleLowerCase())
     )
   }
 
